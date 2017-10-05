@@ -1,0 +1,25 @@
+$bg-color: #EFF2F7;
+$bg-color-light: #FFF;
+$color: #1f2d3d;
+$color-light: #8C939C;
+
+$primary: #20a0ff;
+$success: #28a745;
+$danger: #FF4949;
+$bg-danger-color: #a94442;
+$bg-danger: #E6BFBF;
+
+$border-radius: 2px;
+$box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+
+//Breakpoints
+$breakpoints: (
+  "sm":  576px,
+  "md":  768px,
+  "lg":  992px,
+  "xl":  1200px
+);
+
+//Controla o z-index de todos os components
+$z-indexes: (
+);
