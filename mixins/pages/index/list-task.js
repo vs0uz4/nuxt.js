@@ -1,34 +1,26 @@
 import { mapGetters } from 'vuex'
+import ApiTarefa from '~/mixins/api/tarefa'
 import PageTemplate from '~/mixins/page-template'
 
 export default {
   extends: PageTemplate,
-  data () {
-    return {
-      item: null,
-      modalConfirm: false
-    }
-  },
   computed: mapGetters({
     list: 'tarefa/listOrder'
   }),
   methods: {
-    tarefaFeita (item) {
+    async tarefaFeita (item) {
+      await ApiTarefa.feita(item)
       this.$store.commit('tarefa/TAREFAFEITA', item)
     },
     deletaFeita (item) {
-      this.item = item
       this.$store.dispatch('openConfirmModal', {
         message: 'Tem certeza que deseja excluir a tarefa?',
         info: item,
-        resolve: () => this.$store.commit('tarefa/DELTAREFA', this.item)
+        resolve: async info => {
+          await ApiTarefa.excluir(info)
+          return this.$store.commit('tarefa/DELTAREFA', info)
+        }
       })
-      // this.modalConfirm = true
-    },
-    continueDel () {
-      this.$store.commit('tarefa/DELTAREFA', this.item)
-      this.modalConfirm = false
-      this.item = null
     }
   }
 }

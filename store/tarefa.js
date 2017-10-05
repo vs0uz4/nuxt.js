@@ -3,11 +3,7 @@ import lodash from 'lodash'
 export const plugins = [ lodash ]
 
 export const state = () => ({
-  list: [
-    { feita: true, nome: 'Lavar a Louça' },
-    { feita: false, nome: 'Arrumar a casa' },
-    { feita: false, nome: 'Ir no mercado' }
-  ]
+  list: []
 })
 
 export const getters = {
@@ -15,6 +11,9 @@ export const getters = {
 }
 
 export const mutations = {
+  SETALL (state, payload) {
+    state.list = payload
+  },
   NEWTASK (state, payload) {
     state.list.push(lodash.clone(payload))
   },

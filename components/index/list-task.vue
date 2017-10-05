@@ -1,10 +1,8 @@
 <script>
-import cpLayoutModal from '~/shared/layout/modal.vue'
 import listTask from '~/mixins/pages/index/list-task'
 
 export default {
-  extends: listTask,
-  components: { cpLayoutModal }
+  extends: listTask
 }
 </script>
 

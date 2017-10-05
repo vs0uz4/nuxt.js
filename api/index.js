@@ -14,6 +14,7 @@ router.use((req, res, next) => {
 
 // Rotas
 router = require('./session')(router)
+router = require('./tarefa')(router)
 
 // Export the server middleware
 module.exports = {
