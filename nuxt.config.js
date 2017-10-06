@@ -18,16 +18,12 @@ module.exports = {
   },
   loading: '~/shared/loading.vue',
   /*
-  ** Modules
-  */
-  modules: [
-    '@nuxtjs/bootstrap-vue',
-    '@nuxtjs/font-awesome'
-  ],
-  /*
   ** Global CSS
   */
   css: [
+    '~/node_modules/bootstrap/dist/css/bootstrap.css',
+    '~/node_modules/bootstrap-vue/dist/bootstrap-vue.css',
+    '~/node_modules/font-awesome/css/font-awesome.css',
     '~/node_modules/izitoast/dist/css/iziToast.css',
     '~/assets/scss/main.scss'
   ],
@@ -35,14 +31,15 @@ module.exports = {
   ** Plugins
   */
   plugins: [
-    '~/plugins/vee-validate',
+    { src: '~/plugins/bootstrap-vue', ssr: true },
+    { src: '~/plugins/vee-validate', ssr: true },
     { src: '~/plugins/vue-notifications', ssr: true }
   ],
   /*
   ** Add axios globally
   */
   build: {
-    vendor: ['axios', '@nuxtjs/bootstrap-vue', 'vee-validate', 'vue-notifications'],
+    vendor: ['axios', 'bootstrap-vue', 'vee-validate', 'vue-notifications'],
     /*
     ** Run ESLINT on save
     */

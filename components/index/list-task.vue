@@ -1,5 +1,5 @@
 <script>
-import listTask from '~/mixins/pages/index/list-task'
+import listTask from '~/mixins/components/index/list-task'
 
 export default {
   extends: listTask

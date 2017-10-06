@@ -1,5 +1,5 @@
 <script>
-import newTask from '~/mixins/pages/index/new-task'
+import newTask from '~/mixins/components/index/new-task'
 import cpInputGroup from '~/shared/forms/input-group.vue'
 
 export default {

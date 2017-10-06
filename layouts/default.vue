@@ -1,21 +1,9 @@
 <script>
-import { mapState, mapActions } from 'vuex'
 import cpLayoutModal from '~/shared/layout/modal.vue'
+import Default from '~/mixins/layouts/default'
 
 export default {
-  computed: mapState({
-    confirmModal: state => state.confirmModal
-  }),
-  methods: {
-    async logout () {
-      await this.$store.dispatch('logout')
-      this.$router.push('/login')
-    },
-    ...mapActions({
-      updateModal: 'updateConfirm',
-      continueModal: 'continueConfirm'
-    })
-  },
+  extends: Default,
   components: { cpLayoutModal }
 }
 </script>

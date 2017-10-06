@@ -11,12 +11,12 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
-    "@nuxtjs/bootstrap-vue": "^2.0.2",
-    "@nuxtjs/font-awesome": "^1.0.2",
     "axios": "^0.16.2",
     "body-parser": "^1.17.2",
+    "bootstrap-vue": "^1.0.0-beta.9",
     "express": "^4.15.3",
     "express-session": "^1.15.3",
+    "font-awesome": "^4.7.0",
     "izitoast": "^1.1.5",
     "lodash": "^4.17.4",
     "nuxt": "^1.0.0-rc3",

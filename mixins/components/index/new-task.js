@@ -1,5 +1,5 @@
 import ApiTarefa from '~/mixins/api/tarefa'
-import PageTemplate from '~/mixins/page-template'
+import PageTemplate from '~/mixins/template/page'
 
 export default {
   extends: PageTemplate,

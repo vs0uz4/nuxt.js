@@ -1,4 +1,4 @@
-import PageTemplate from '~/mixins/page-template'
+import PageTemplate from '~/mixins/template/page'
 
 export default {
   extends: PageTemplate,

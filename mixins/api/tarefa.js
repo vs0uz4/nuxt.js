@@ -1,16 +1,16 @@
-import axios from 'axios'
+import axios from '~/plugins/axios'
 
 export default {
   get () {
-    return axios.get('http://localhost:3000/api/tarefa')
+    return axios.get('/tarefa')
   },
   put (dados) {
-    return axios.put('http://localhost:3000/api/tarefa', dados)
+    return axios.put('/tarefa', dados)
   },
   feita (dados) {
-    return axios.post('http://localhost:3000/api/tarefa/feita', dados)
+    return axios.post('/tarefa/feita', dados)
   },
   excluir (dados) {
-    return axios.post('http://localhost:3000/api/tarefa/excluir', dados)
+    return axios.post('/tarefa/excluir', dados)
   }
 }

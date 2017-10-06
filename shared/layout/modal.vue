@@ -38,10 +38,10 @@ export default {
               <div class="full-wd">
                 <div class="row">
                   <div class="col-6">
-                    <button class="btn btn-primary btn-block" @click="continuar">Continuar</button>
+                    <button class="btn btn-primary btn-block btn-sm" @click="continuar">Ok</button>
                   </div>
                   <div class="col-6"> 
-                    <button class="btn btn-secondary btn-block" @click="close">Cancelar</button>
+                    <button class="btn btn-secondary btn-block btn-sm" @click="close">Cancelar</button>
                   </div>
                 </div>
               </div>
